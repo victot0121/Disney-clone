@@ -38,7 +38,7 @@ function Header() {
     ]
     return (
         <>
-            <div className='flex items-center gap-3 justify-between'>
+            <div className='flex items-center gap-3 justify-between p-5'>
                 <div className='flex  gap-8 items-center'>
                     <img className='w-[80px] md:w-[115px] object-cover' src={logo} alt="disney logo" />
                     <div className='hidden md:flex gap-8' >

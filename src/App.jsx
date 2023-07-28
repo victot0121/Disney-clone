@@ -1,5 +1,6 @@
-import { useState } from 'react'
 import Header from './Componets/Header'
+import Slider from './Componets/Slider'
+
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="">
         <Header/>
+        <Slider/>
     </div>
   )
 }
