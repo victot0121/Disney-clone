@@ -16,10 +16,7 @@ function Slider() {
     }, [])
 
     const getTrendingMovies = () => {
-        GlobalApi.getTrendingVideos.then(res => {
-            console.log(res.data.results);
-            setMoviesList(res.data.results)
-        })
+        GlobalApi.getTrendingVideos.then(res =>  setMoviesList(res.data.results))
     }
 
     const sliderRight = (element) =>{

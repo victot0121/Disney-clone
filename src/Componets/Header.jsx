@@ -2,7 +2,6 @@ import logo from '../assets/Images/logo.png'
 import { HiHome, HiMagnifyingGlass, HiStar, HiPlayCircle, HiTv } from 'react-icons/hi2'
 import { HiPlus, HiDotsVertical } from "react-icons/hi"
 import HeaderItems from './HeaderItems'
-import nationalG from "../assets/Images/nationalG.png"
 import { useState } from 'react'
 
 
@@ -38,7 +37,7 @@ function Header() {
     ]
     return (
         <>
-            <div className='flex items-center gap-3 justify-between p-5'>
+            <div className='flex items-center justify-between p-5'>
                 <div className='flex  gap-8 items-center'>
                     <img className='w-[80px] md:w-[115px] object-cover' src={logo} alt="disney logo" />
                     <div className='hidden md:flex gap-8' >
@@ -46,13 +45,14 @@ function Header() {
                             <HeaderItems key={item.name} name={item.name} Icon={item.icon} />
                         ))}
                     </div>   
-                    <div className='flex gap-5 md:hidden' >
+                    <div className='flex md:hidden gap-5' >
                         {menu.map((item, index) => index<3&&(
                             <HeaderItems key={item.name} name={''} Icon={item.icon} />
                         ))}
                         <div className='md:hidden' onClick={()=>(setToggle(!toggle))}>
                            <HeaderItems name={''} Icon={HiDotsVertical}/>
-                          {toggle? <div className='absolute mt-3 bg-[#121212] border-[1px] p-3 border-gray-700 px-5 py-3'>
+                          {toggle? <div className='absolute mt-3 bg-[#121212] 
+            border-[1px] border-gray-700 p-3 px-5 py-4'>
                             {menu.map((item, index) => index<3&&(
                                 <HeaderItems key={item.name} name={item.name} Icon={item.icon} />
                             ))}
@@ -60,7 +60,7 @@ function Header() {
                         </div>
                     </div>   
                 </div>
-                <img src={nationalG} alt="nationalG" className='w-[90px] rounded-full' />
+                <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745" alt="nationalG" className='w-[90px] rounded-full' />
             </div>
             <div>
 
